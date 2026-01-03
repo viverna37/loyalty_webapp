@@ -1,7 +1,6 @@
 import {BalanceCard} from "../shared/ui/BalanceCard/BalanceCard.tsx";
 import {BurnCard} from "../shared/ui/BurnCard/BurnCard.tsx";
 import {ActionButton} from "../shared/ui/ActionButton/ActionButton.tsx";
-import '../shared/styles/index.css'
 import '../shared/ui/ActionButton/action_button.css'
 
 function UserMainScreen() {
