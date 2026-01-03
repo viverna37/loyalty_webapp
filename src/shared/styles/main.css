@@ -1,0 +1,17 @@
+#root {
+    height: 100vh;
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 16px;
+    flex-direction: column;
+    display: flex;
+    background: linear-gradient(
+            180deg,
+            #5b8cff 0%,
+            #0e0e12 21%
+    );
+}
+
+:root{
+    --primary: #0f0f0f;
+}

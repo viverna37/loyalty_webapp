@@ -1,0 +1,15 @@
+.card {
+    background: linear-gradient(180deg, #17171d, #121217);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 16px;
+}
+
+.card-label {
+    font-size: 13px;
+    color: #9aa0a6;
+}
+
+.star {
+    margin-left: 6px;
+}

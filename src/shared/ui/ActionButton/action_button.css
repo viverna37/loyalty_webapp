@@ -1,0 +1,26 @@
+
+.action-button {
+    width: 100%;
+    padding: 14px;
+    border-radius: 14px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 12px;
+    transition: transform 0.1s ease, opacity 0.1s ease;
+}
+
+.action-button:active {
+    transform: scale(0.98);
+}
+
+.action-button.primary {
+    background: #5b8cff;
+    color: #ffffff;
+}
+
+.action-button.secondary {
+    background: #2a2a33;
+    color: #ffffff;
+    opacity: 0.85;
+}

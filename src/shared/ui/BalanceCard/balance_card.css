@@ -1,0 +1,13 @@
+.balance-card {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.balance-value {
+    margin-top: 8px;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: aliceblue;
+}
+
+
