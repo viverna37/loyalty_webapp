@@ -22,9 +22,10 @@
     bottom: 0;
 
     height: 72vh;
+    max-height: 72vh;
     border-radius: 24px 24px 0 0;
 
-    background: rgba(23, 23, 29, 0.95);
+    background: var(--layout_bg);
     padding: 20px;
 
     transform: translateY(100%);

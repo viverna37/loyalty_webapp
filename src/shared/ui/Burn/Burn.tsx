@@ -18,8 +18,8 @@ export function BurnSheet({ open, onClose }: Props) {
                     <div className="menu-divider" />
                 </div>
 
-                <div className="menu-content">
-                    <img src="public/qr.png" alt=""/>
+                <div className="burn-menu-content">
+                    <img src="/qr.png" alt=""/>
 
                     <span className="burn-menu-subtitile">Предъявите QR-code администратору</span>
                 </div>

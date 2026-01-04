@@ -1,5 +1,7 @@
 import '../../styles/menu.css'
+import './history.css'
 import {ActionButton} from "../ActionButton/ActionButton.tsx";
+import {HistoryItem} from "../HistoryItem/HistoryItem.tsx";
 
 type Props = {
     open: boolean
@@ -18,8 +20,15 @@ export function HistorySheet({ open, onClose }: Props) {
                     <div className="menu-divider" />
                 </div>
 
-                <div className="menu-content">
-                    {/* тут список операций */}
+                <div className="history-menu-content">
+                    <HistoryItem amount={100} date={"02 янв. 2026 г., 03:01"} type={"credit"}/>
+                    <HistoryItem amount={100} date={"02 янв. 2026 г., 03:01"} type={"debit"}/>
+                    <HistoryItem amount={100} date={"02 янв. 2026 г., 03:01"} type={"credit"}/>
+                    <HistoryItem amount={100} date={"02 янв. 2026 г., 03:01"} type={"debit"}/>
+                    <HistoryItem amount={100} date={"02 янв. 2026 г., 03:01"} type={"debit"}/>
+                    <HistoryItem amount={100} date={"02 янв. 2026 г., 03:01"} type={"debit"}/>
+                    <HistoryItem amount={100} date={"02 янв. 2026 г., 03:01"} type={"debit"}/>
+                    <HistoryItem amount={100} date={"02 янв. 2026 г., 03:01"} type={"debit"}/>
                 </div>
 
                 <div className="menu-bottom">

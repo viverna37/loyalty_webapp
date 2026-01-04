@@ -1,28 +1,27 @@
+import './history_item.css'
 
 type Props = {
-    open: boolean
-    onClose: () => void
+    amount: number
+    date: string
+    type: 'credit' | 'debit'
 }
 
-export function HistorySheet({ open, onClose }: Props) {
+export function HistoryItem({ amount, date, type }: Props) {
+    const isCredit = type === 'credit'
+
     return (
-        <div className={`menu-overlay ${open ? 'open' : ''}`} onClick={onClose}>
-    <div
-        className={`menu-sheet ${open ? 'open' : ''}`}
-    onClick={(e) => e.stopPropagation()}
->
-    <div className="menu-header">
-    <div className="menu-title">ИСТОРИЯ</div>
-        <div className="menu-divider" />
+        <div className="history-item">
+            <div className="history-left">
+                <div className={`history-amount ${isCredit ? 'plus' : 'minus'}`}>
+                    {isCredit ? '+' : '-'}
+                    {Math.abs(amount)} ⭐
+                </div>
+                <div className="history-date">{date}</div>
+            </div>
+
+            <div className={`history-type ${isCredit ? 'credit' : 'debit'}`}>
+                {isCredit ? 'Начисление' : 'Списание'}
+            </div>
         </div>
-
-        <div className="menu-content">
-
-        </div>
-
-        <div className="menu-bottom">
-    </div>
-    </div>
-    </div>
-)
+    )
 }
