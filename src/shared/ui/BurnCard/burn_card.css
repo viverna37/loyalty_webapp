@@ -1,26 +1,5 @@
-
-.burn-card {
-    background: linear-gradient(180deg, #15151c, #0f0f14);
-}
-
 .burn-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.burn-date {
-    font-size: 13px;
-    color: #9aa0a6;
-}
-
-.burn-value {
-    margin-top: 8px;
-    font-size: 28px;
-    font-weight: 600;
-    color: aliceblue;
-}
-
-.fire {
-    margin-left: 4px;
 }

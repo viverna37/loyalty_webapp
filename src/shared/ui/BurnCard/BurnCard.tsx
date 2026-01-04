@@ -14,10 +14,10 @@ export function BurnCard({ value, date }: BurnCardProps) {
         <span className="card-label">
           Сгорают <span className="fire">🔥</span>
         </span>
-                <span className="burn-date">{date}</span>
+                <span className="card-label">{date}</span>
             </div>
 
-            <div className="burn-value">
+            <div className="card-value">
                 {value.toLocaleString('ru-RU')} <span className="star">⭐</span>
             </div>
         </div>

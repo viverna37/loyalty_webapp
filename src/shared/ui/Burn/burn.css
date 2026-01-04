@@ -1,0 +1,20 @@
+.menu-content{
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.menu-content>img{
+    width: 100%;
+    padding: 0 20px;
+}
+
+.burn-menu-subtitile{
+    font-size: 15px;
+    margin-top: 20px;
+    color: var(--text_secondary);
+}

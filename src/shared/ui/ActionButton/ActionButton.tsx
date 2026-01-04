@@ -1,3 +1,5 @@
+import './action_button.css'
+
 type ActionButtonProps = {
     text: string
     primary?: boolean

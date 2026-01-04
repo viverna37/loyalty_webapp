@@ -1,0 +1,28 @@
+.header {
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.content{
+    margin-top: 15px;
+}
+
+.header-title{
+    font-family: Unbounded, sans-serif;
+    font-size: 25px;
+}
+
+.header-subtitle{
+    margin-top: 4px;
+    font-size: 15px;
+    color: var(--text_secondary);
+}
+
+.logo{
+    width: 150px;
+    border-radius: 30px;
+    box-shadow: 5.64px 5.64px 18.8px 0 rgba(91, 140, 255, 0.5);
+}
