@@ -1,19 +1,17 @@
-import '../../styles/card.css'
-
-
 type BalanceCardProps = {
-    value: number
-}
+    value: number | null;
+    loading: boolean;
+};
 
-
-export function BalanceCard({ value }: BalanceCardProps) {
+export function BalanceCard({ value, loading }: BalanceCardProps) {
     return (
         <div className="card balance-card">
             <span className="card-label">Баланс</span>
 
             <div className="card-value">
-                {value.toLocaleString('ru-RU')} <span className="star">⭐</span>
+                {loading ? "…" : value?.toLocaleString("ru-RU")}{" "}
+                <span className="star">⭐</span>
             </div>
         </div>
-    )
+    );
 }

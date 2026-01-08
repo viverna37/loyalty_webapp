@@ -30,9 +30,8 @@
     background: linear-gradient(
             180deg,
             var(--bg2) 0%,
-            var(--bg) 18%
+            var(--bg) 20%
     );
-
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;

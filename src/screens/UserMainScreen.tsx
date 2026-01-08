@@ -9,6 +9,10 @@ import {useState} from "react";
 import {BurgerMenu} from "../shared/ui/Burger/BurgerMenu.tsx";
 import {HistorySheet} from "../shared/ui/History/History.tsx";
 import {BurnSheet} from "../shared/ui/Burn/Burn.tsx";
+import {useBalance} from "../shared/hooks/useBalance.ts";
+import {useTelegramInit} from "../shared/hooks/useTelegramInit.ts";
+import {useBurnedPoints} from "../shared/hooks/useBurnedPoints.ts";
+import {useHistory} from "../shared/hooks/useHistory.ts";
 
 type Overlay =
     | 'menu'
@@ -18,13 +22,24 @@ type Overlay =
 
 function UserMainScreen() {
     const [overlay, setOverlay] = useState<Overlay>(null)
+    const tg = useTelegramInit();
+    const isReady = tg.status === "ready";
+
+    const {balance, loading_balance} = useBalance(
+        isReady ? tg.initData : null
+    );
+    const {points, date, loading_burned_points} = useBurnedPoints(isReady ? tg.initData : null);
+    const {data, loading_history} = useHistory(isReady ? tg.initData : null);
+
     return (
 
         <div className="screen">
-            <BurgerButton onClick={() => setOverlay('menu')}/> <Header/>
+            <BurgerButton onClick={() => setOverlay('menu')}/>
+            <Header/>
             <div className="content">
-                <BalanceCard value={1234567}/>
-                <BurnCard value={123456} date="24 февраля 2025"/>
+                <BalanceCard value={balance} loading={loading_balance}/>
+
+                <BurnCard value={points} date={date} loading={loading_burned_points}/>
             </div>
             <div className="bottom">
                 <ActionButton
@@ -35,19 +50,19 @@ function UserMainScreen() {
                 <ActionButton
                     text="История операций"
                     onClick={() => setOverlay('history')}/>
-            </div>
-            <BurgerMenu
-                open={overlay === 'menu'}
-                onClose={() => setOverlay(null)}/>
-            <HistorySheet
-                open={overlay === 'history'}
-                onClose={() => setOverlay(null)}
-            />
+                <BurgerMenu
+                    open={overlay === 'menu'}
+                    onClose={() => setOverlay(null)}/>
+                <HistorySheet data={data} loading={loading_history}
+                              open={overlay === 'history'}
+                              onClose={() => setOverlay(null)}
+                />
 
-            <BurnSheet
-                open={overlay === 'burn'}
-                onClose={() => setOverlay(null)}
-            />
+                <BurnSheet
+                    open={overlay === 'burn'}
+                    onClose={() => setOverlay(null)}
+                />
+            </div>
         </div>
     )
 }

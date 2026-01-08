@@ -3,3 +3,8 @@
     justify-content: space-between;
     align-items: center;
 }
+
+.burn-empty{
+    font-size: 22px;
+    color: var(--text_secondary);
+}

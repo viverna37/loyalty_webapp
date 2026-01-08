@@ -9,3 +9,28 @@
     margin-top: 15px ;
     margin-bottom: 15px ;
 }
+
+.history-menu-content.empty {
+    justify-content: center;
+    align-items: center;
+}
+
+.history-empty{
+    background: var(--card);
+    border-radius: 16px;
+    padding: 14px 16px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+    font-size: 21px;
+}
+
+.history-empty>span {
+    color: var(--text_secondary);
+    font-size: 19px;
+
+}
